@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio - Samuel Charbit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#presentation">Présentation</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#veille">Veille Techno</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="App">
+        <section id="accueil" class="accueil">
+            <div class="accueil-content">
+                <div class="text">
+                    <h1>Je m'appelle Samuel Charbit,</h1>
+                    <h1>j'ai 18 ans et je suis étudiant à l'IPSSI</h1>
+                    <p class="futur-dev">Futur Développeur Web</p>
+                </div>
+                <img src="public/tête.jpg" alt="Ma photo" class="photo-ronde">
+            </div>
+        </section>
+
+        <section id="presentation" class="presentation">
+            <h2>Présentation</h2>
+            <p>Salut, moi c'est Samuel Charbit 👋</p>
+            <p>Je suis actuellement étudiant à l'école IPSSI de Paris en première année de BTS SIO (Services Informatiques aux Organisations) dans l'option SLAM (Solutions Logicielles et Application Métier) qui est une option spécialisée pour le développement 💻</p>
+            <p>Avant d'intégrer l'IPSSI, j'ai suivi un cursus en filière STMG (Sciences et Technologies du Management et de la Gestion) au lycée, où j'ai obtenu mon baccalauréat.</p>
+            <p>J'ai également effectué un stage de 5 semaines en fin de première année au sein de l'entreprise Pixel Drop.</p>
+            <p>Je réalise actuellement ma formation en alternance au sein de l’entreprise Link By Data, où je peux mettre en pratique mes compétences techniques sur des projets concrets et professionnels.</p>
+            <p>Actuellement toujours en cours d'étude 🎓, je vous propose sur ce portfolio de retrouver ci-dessous les différentes études et projets professionnels que j'ai pu entreprendre au sein de ma carrière.</p>
+            <button id="cv-button" class="btn-cv">Voir mon CV</button>
+        </section>
+
+        <div id="cv-modal" class="modal">
+            <span class="close-button" id="close-modal">&times;</span>
+            <div class="modal-content">
+                <iframe src="public/CV.pdf" title="CV de Samuel Charbit" class="pdf-iframe"></iframe>
+            </div>
+        </div>
+
+        <section id="competences" style="text-align: center; padding: 50px 20px;">
+            <h2>Mes compétences</h2>
+            <div class="carousel-container">
+                <button class="carousel-button left" id="prevBtn">&lt;</button>
+                <div class="carousel-content" id="carousel-display">
+                    </div>
+                <button class="carousel-button right" id="nextBtn">&gt;</button>
+            </div>
+            <div style="margin-top: 40px;">
+                <a href="public/Tableau de synthese.xlsx" download class="btn-download">Tableau de Synthèse</a>
+            </div>
+        </section>
+
+        <section id="projets" class="projets">
+            <h2>Mes projets</h2>
+            <div class="projets-list">
+
+                <!-- Projet BDD films -->
+                <div class="projet">
+                    <h3>Site de recherche de films et séries</h3>
+                    <p>Ce projet est un site de recherche de films et séries avec un système de favoris et des filtres dynamiques. Il a été réalisé en utilisant HTML, CSS et JavaScript pour offrir une expérience utilisateur fluide et interactive.</p>
+                    <a href="projets/projet BDD films/index.html" target="_blank" class="btn-projet">Voir le projet</a>
+                    <a href="Documentations/Documentation projet BDD films.pdf" target="_blank" class="btn-doc" style="margin-top: 10px;">En savoir plus</a>
+                </div>
+
+                <!-- Projet Citoyen -->
+                <div class="projet">
+                    <h3>Projet Citoyen : L’Envers du Look</h3>
+                    <p>Ce site présente une mini présentation sur la Fast Fashion, intègre un magazine et propose un quiz interactif. Il a été développé en utilisant HTML, CSS et JavaScript pour sensibiliser les utilisateurs aux enjeux de la mode rapide.</p>
+                    <a href="projets/projet citoyen/index.html" target="_blank" class="btn-projet">Voir le projet</a>
+                    <a href="Documentations/Documentation projet citoyen.pdf" target="_blank" class="btn-doc" style="margin-top: 10px;">En savoir plus</a>
+                </div>
+
+                <!-- Projet Crok Informatics -->
+                <div class="projet">
+                    <h3>Site Crok Informatics</h3>
+                    <p>Ce site est dédié à une entreprise fictive, Crok Informatics, spécialisée dans la vente de composants informatiques et de PC prémontés. Il a été réalisé en utilisant HTML et CSS pour offrir une interface utilisateur attrayante et fonctionnelle.</p>
+                    <a href="projets/projet crok/PageAccueil.html" target="_blank" class="btn-projet">Voir le projet</a>
+                    <a href="Documentations/Documentation projet Crok Informatics.pdf" target="_blank" class="btn-doc" style="margin-top: 10px;">En savoir plus</a>
+                </div>
+
+                <!-- Projet Morpion -->
+                <div class="projet">
+                    <h3>Jeu de morpion</h3>
+                    <p>Ce projet est un jeu de morpion classique réalisé en utilisant HTML et CSS. Il offre une interface simple et intuitive pour jouer au morpion.</p>
+                    <a href="projets/projet morpion/Morpion.html" target="_blank" class="btn-projet">Voir le projet</a>
+                    <a href="Documentations/Documentation projet morpion.pdf" target="_blank" class="btn-doc" style="margin-top: 10px;">En savoir plus</a>
+                </div>
+
+                <!-- Projet Shifumi -->
+                <div class="projet">
+                    <h3>Jeu pierre-feuille-ciseaux</h3>
+                    <p>Ce projet est un jeu de pierre-feuille-ciseaux interactif réalisé en utilisant HTML, CSS et JavaScript. Il permet aux utilisateurs de jouer contre l'ordinateur et de tester leur chance.</p>
+                    <a href="projets/projet shifumi/index.html" target="_blank" class="btn-projet">Voir le projet</a>
+                    <a href="Documentations/Documentation projet shifumi.pdf" target="_blank" class="btn-doc" style="margin-top: 10px;">En savoir plus</a>
+                </div>
+
+                <!-- Projet GeoQuiz -->
+                <div class="projet">
+                    <h3>Jeu GeoQuiz</h3>
+                    <p>Ce projet est un jeu de quiz sur les drapeaux avec 4 propositions à chaque question. Le joueur doit deviner le bon pays pendant 10 manches, et un score final est affiché. Réalisé en HTML, CSS et JavaScript.</p>
+                    <a href="projets/projet geoquiz/index.html" target="_blank" class="btn-projet">Voir le projet</a>
+                    <a href="Documentations/Documentation projet geoquiz.pdf" target="_blank" class="btn-doc" style="margin-top: 10px;">En savoir plus</a>
+                </div>
+
+                <!-- Projet Bibliothèque PHP -->
+                <div class="projet">
+                    <h3>Bibliothèque PHP</h3>
+                    <p>Ce projet est une application de recherche de livres avec la possibilité de créer un compte, d’ajouter des livres en favoris et de stocker ces informations dans une base de données. Réalisé en PHP, CSS et JavaScript.</p>
+                    <a href="https://github.com/SamuelCharbit0/TP-Librairie" target="_blank" class="btn-projet">Voir le projet</a>
+                    <a href="Documentations/Documentation projet Bibliothèque PHP.pdf" target="_blank" class="btn-doc" style="margin-top: 10px;">En savoir plus</a>
+                </div>
+
+                <!-- Projet Saco -->
+                <div class="projet">
+                    <h3>Site vitrine - Saco</h3>
+                    <p>Création d'un site vitrine professionnel pour l'entreprise Saco. J'ai créer l'intégralité des pages en respectant une maquette Figma et en mettant en place des contenus dynamiques complexes. Réalisé avec WordPress et Elementor Pro.</p>
+                    <a href="https://www.saco.fr/" target="_blank" class="btn-projet">Voir le projet</a>
+                    <a href="Documentations/Documentation projet saco.pdf" target="_blank" class="btn-doc" style="margin-top: 10px;">En savoir plus</a>
+                </div>
+
+                <!-- Projet Away Expeditions-->
+                <div class="projet">
+                    <h3>Away Expeditions (Dubaï)</h3>
+                    <p>Conception du site d'une agence d'expéditions haut de gamme basée à Dubaï. J'ai réalisé l'intégration de 8 pages immersives, géré le responsive complet et ajouté des animations pour refléter l'univers de l'agence. Réalisé avec WordPress et Elementor Pro.</p>
+                    <a href="https://awayexpedition.com/" target="_blank" class="btn-projet">Voir le projet</a>
+                    <a href="Documentations/Documentation projet away expeditions.pdf" target="_blank" class="btn-doc" style="margin-top: 10px;">En savoir plus</a>
+                </div>
+
+                <!-- Projet LXL Estates-->
+                <div class="projet">
+                    <h3>LXB Estates - Immobilier</h3>
+                    <p>Développement d'un site immobilier avec un système de catalogue dynamique. J'ai créé des types de contenus personnalisés pour la gestion des biens à vendre et à louer, incluant des filtres de recherche et des modèles de pages automatisés. Réalisé avec WordPress et Elementor Pro.</p>
+                    <a href="https://lxb-estates.com/" target="_blank" class="btn-projet">Voir le projet</a>
+                    <a href="Documentations/Documentation projet lxb estates.pdf" target="_blank" class="btn-doc" style="margin-top: 10px;">En savoir plus</a>
+                </div>
+
+            </div>
+        </section>
+
+<section id="veille" class="veille">
+    <h2>Veille Technologique</h2>
+    <div class="veille-container">
+        <div class="veille-item">
+            <h3>Les Machines Virtuelles (VM)</h3>
+            <p>J'ai étudié le fonctionnement des hyperviseurs, l'optimisation des ressources serveurs et</p>
+            <p>la comparaison entre les machines virtuelles et la conteneurisation Docker.</p>
+            <a href="public/Veille Techno.pptx" download class="btn-download">Veille (VM)</a>
+        </div>
+
+        <div class="veille-item">
+            <h3>L'Intelligence Artificielle (IA) Générative en Réalité Virtuelle</h3>
+            <p>J'ai analysé comment l'IA automatise la création d'univers 3D, le Gaussian Splatting et</p>
+            <p>l'intégration de Large Language Model (LLM) pour des interactions naturelles en Réalité Virtuelle.</p>
+            <a href="public/Veille Techno 2.pptx" download class="btn-download">Veille (IA)</a>
+        </div>
+    </div>
+</section>
+
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <div class="contact-box">
+                <p class="contact-title" style="font-size: 2rem;">Vous souhaitez me contacter ?</p>
+                <p class="contact-email">Email : <a href="mailto:samuelcharbit2006@gmail.com">samuelcharbit2006@gmail.com</a></p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/samuel-charbit-117358312/" target="_blank"><img src="public/linkedin.png" alt="linkedin" class="icon"></a>
+                    <a href="https://github.com/SamuelCharbit0" target="_blank"><img src="public/github.png" alt="github" class="icon"></a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2025 - Mon Portfolio</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

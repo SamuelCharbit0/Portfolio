@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+    
+    <div class="container">
+        <h1>Recherche de Films & Séries</h1>
+    
+        <input type="text" id="search-input" placeholder="Rechercher un film ou une série...">
+        <button id="search-btn">Rechercher</button>
+    
+        <div class="filters">
+            <h3>Filtres :</h3>
+    
+            <label for="genre-filter">Genre :</label>
+            <select id="genre-filter">
+                <option value="">Tous les genres</option>
+                <option value="action">Action</option>
+                <option value="adventure">Adventure</option>
+                <option value="animation">Animation</option>
+                <option value="comedy">Comédie</option>
+                <option value="crime">Crime</option>
+                <option value="documentary">Documentary</option>
+                <option value="family">Family</option>
+                <option value="drama">Drame</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="horror">Horreur</option>
+                <option value="romance">Romance</option>
+                <option value="mystery">Mystery</option>
+                <option value="thriller">Thriller</option>
+                <option value="sci-fi">Science-fiction</option>
+            </select>
+    
+            <label for="rating-filter">Note minimale :</label>
+            <select id="rating-filter">
+                <option value="">Toutes les notes</option>
+                <option value="6">Supérieur à 6</option>
+                <option value="7">Supérieur à 7</option>
+                <option value="8">Supérieur à 8</option>
+                <option value="9">Supérieur à 9</option>
+            </select>
+    
+            <label for="year-filter">Année :</label>
+            <input type="text" id="year-filter" placeholder="Année (ex: 2020)">
+    
+            <label for="type-filter">Type :</label>
+            <select id="type-filter">
+                <option value="">Tous</option>
+                <option value="movie">Films</option>
+                <option value="series">Séries</option>
+            </select>
+        </div>
+    
+        <button id="fav-btn">Voir mes favoris</button>
+    
+        <div id="results"></div>
+    
+        <!-- Section Favoris -->
+        <div id="fav-section">
+            <button id="close-fav-btn">Fermer</button>
+            <h2>Vos Favoris</h2>
+            <h3>Films</h3>
+            <div id="fav-movies-results"></div>
+            <h3>Séries</h3>
+            <div id="fav-series-results"></div>
+        </div>
+    </div>
+
+</body>
+</html>

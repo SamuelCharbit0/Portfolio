@@ -1,0 +1,491 @@
+/* --- CONFIGURATION GÉNÉRALE --- */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28'%3E%3Cline x1='14' y1='4' x2='14' y2='24' stroke='%23BFBFBF' stroke-width='2.2'/%3E%3Cline x1='4' y1='14' x2='24' y2='14' stroke='%23BFBFBF' stroke-width='2.2'/%3E%3C/svg%3E") 14 14, crosshair;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #5a5aff, #0000ff);
+    color: #fff;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    background-color: rgba(0, 0, 50, 0.95);
+    padding: 1.8rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 3.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background-color: orange;
+    transition: width 0.3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+
+/* --- TITRES --- */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+    display: inline-block;
+    border-bottom: 2px solid #fff;
+    text-align: center;
+}
+
+/* --- ACCUEIL --- */
+.accueil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 200px 20px 100px;
+}
+
+.accueil-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.text {
+    text-align: left;
+}
+
+.accueil-content h1 {
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+}
+
+.futur-dev {
+    font-size: 1.6rem;
+    color: #d3d3d3;
+}
+
+.photo-ronde {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* --- PRÉSENTATION --- */
+.presentation {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.presentation p {
+    margin: 0 auto 20px;
+    line-height: 1.8;
+    max-width: 850px;
+    font-size: 1.2rem;
+}
+
+.btn-cv {
+    background: #fff;
+    color: #000;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border-radius: 35px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.btn-cv:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+/* --- COMPÉTENCES --- */
+#competences {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Nécessaire pour le positionnement des flèches */
+    max-width: 900px;
+    margin: 0 auto;
+    min-height: 450px; /* On fixe une hauteur mini pour que rien ne bouge */
+}
+
+.carousel-button {
+    font-size: 3.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    position: absolute; /* On les sort du flux pour qu'elles soient fixes */
+    top: 50%; /* On les centre verticalement par rapport au conteneur */
+    transform: translateY(-50%);
+    transition: color 0.3s, transform 0.2s;
+    z-index: 10;
+}
+
+.carousel-button:hover {
+    color: orange;
+    transform: translateY(-50%) scale(1.2);
+}
+
+.carousel-button.left {
+    left: 40px; /* Distance fixe à gauche */
+}
+
+.carousel-button.right {
+    right: 40px; /* Distance fixe à droite */
+}
+
+.carousel-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.carousel-content img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.skill-description {
+    font-weight: bold;
+    max-width: 600px;
+    margin: 10px auto;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    min-height: 80px; /* Réserve l'espace pour 3-4 lignes de texte */
+}
+
+.btn-download {
+    background: #fff;
+    color: #000;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+.btn-download:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+/* --- PROJETS --- */
+.projets {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.projets-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin: 30px auto;
+    max-width: 950px;
+}
+
+.projet {
+    background: rgba(100, 149, 237, 0.2);
+    padding: 20px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 420px; /* Augmenté pour les 2 boutons */
+}
+
+.projet h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #fff;
+    min-height: 4rem; 
+    display: flex;
+    align-items: flex-start; /* Aligné en haut */
+    justify-content: center;
+}
+
+.projet p {
+    font-size: 1.05rem;
+    line-height: 1.4;
+    color: #fff;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.btn-projet {
+    background: #007bff;
+    color: #ffd700 !important; /* Jaune */
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+    border: none;
+    align-self: center;
+    margin-bottom: 10px; /* Espace pour le bouton suivant */
+}
+
+.btn-projet:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn-doc {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+    border: none;
+    align-self: center;
+    margin-bottom: 10px; /* Espace pour le bouton suivant */
+}
+
+.btn-doc:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* --- VEILLE TECHNOLOGIQUE --- */
+.veille {
+    padding: 20px 20px 20px 20px;
+    text-align: center;
+    padding-top: 80px;
+    margin-top: -50px;
+}
+
+.veille-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    max-width: 950px;
+}
+
+.veille-item {
+    /* MÊME BLEU QUE TES PROJETS */
+    background: rgba(100, 149, 237, 0.2); 
+    padding: 20px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px;
+    min-height: 320px; /* Ajusté pour que ce soit équilibré */
+}
+
+.veille-item h3 {
+    font-size: 1.5rem; /* Taille réduite pour l'équilibre */
+    margin-bottom: 15px;
+    color: #fff;
+    min-height: 4rem; /* Espace réservé pour le titre */
+    display: flex;
+    align-items: flex-start; /* Aligne la première ligne en haut comme les projets */
+    justify-content: center;
+    text-align: center;
+}
+
+.veille-item p {
+    font-size: 1.05rem;
+    line-height: 1.3; /* Interligne un peu plus serré */
+    color: #fff;
+    margin: 0; /* Supprime l'écart entre les paragraphes */
+    padding: 0;
+}
+
+/* On ajoute une petite marge uniquement sous le dernier paragraphe avant le bouton */
+.veille-item p:last-of-type {
+    margin-bottom: 20px;
+}
+
+/* FIX POUR LES BOUTONS (Pour éviter qu'ils soient énormes) */
+.veille-item .btn-download {
+    align-self: center;
+    padding: 10px 25px;
+    font-size: 1rem;
+    margin-top: 16px; /* Pousse le bouton vers le bas si besoin */
+}
+
+/* --- CONTACT --- */
+.contact {
+    padding: 20px 20px 80px 20px;
+    text-align: center;
+}
+
+.contact-box {
+    background: #fff;
+    color: #000;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.contact-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.contact-email {
+    font-size: 1.4rem;
+    margin: 15px 0;
+}
+
+.contact-email a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-email a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.social-icons .icon {
+    width: 45px;
+    height: 45px;
+}
+
+.social-icons .icon:hover {
+transform: scale(1.1);
+}
+
+/* --- FOOTER --- */
+footer {
+    padding: 20px;
+    background: rgba(0, 0, 50, 0.8);
+    text-align: center;
+}
+
+footer p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin: 5px 0 0;
+}
+
+/* --- MODAL --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Un peu plus sombre */
+    overflow: hidden; /* Empêche le scroll de la modal elle-même */
+}
+
+body.modal-open {
+    overflow: hidden; 
+}
+
+.modal-content {
+    margin: 5vh auto;
+    width: 90%;
+    max-width: 900px; /* Largeur réduite pour un aspect portrait */
+    height: 90vh;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pdf-iframe { 
+    width: 100%; 
+    height: 100%; 
+    border: none; 
+}
+
+.close-button {
+    position: absolute;
+    top: 10px; 
+    right: 30px;
+    font-size: 4rem;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.close-button:hover {
+    color: orange; /* Ton hover orange */
+    transform: scale(1.1);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .projets-list { grid-template-columns: 1fr; }
+    .projet h3 { min-height: auto; }
+}

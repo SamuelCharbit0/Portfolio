@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shifumi</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Mon jeu de shifumi en JS</h1>
+
+    <div class="game-wrapper">
+        <div class="results">
+            <div class="result">Résultat : <span id="result-text">En attente...</span></div>
+            <div class="player">Joueur : <span id="player-choice">?</span></div>
+            <div class="computer">Adversaire : <span id="computer-choice">?</span></div>
+            <div class="score">Score : <span id="score">0</span></div>
+            <div class="rounds">Manche : <span id="round">1</span>/10</div>
+        </div>
+        <button class="play">Jouer</button>
+        <div class="choices">
+            <img id="leafIcon" src="./assets/leaf.png" alt="feuille" data-choice="feuille">
+            <img id="scissorIcon" src="./assets/scissors.png" alt="ciseaux" data-choice="ciseaux">
+            <img id="stoneIcon" src="./assets/stone.png" alt="pierre" data-choice="pierre">
+        </div>
+    </div>
+</body>
+</html>

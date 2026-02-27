@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeu du Drapeau</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <h2 id="round-title">Chargement...</h2>
+        <img id="flag-image" src="" alt="drapeau" class="flag-image hidden">
+        <div class="options-grid" id="options-grid"></div>
+        <div id="game-over" class="hidden">
+          <h2>Partie terminée !</h2>
+          <p id="final-score"></p>
+          <button class="replay-button" onclick="restartGame()">Rejouer</button>
+        </div>
+      </div>
